@@ -23,7 +23,7 @@ html {
 .catalog-list,
 .features-list,
 .social-list,
-.documents-list{
+.documents-list {
     list-style: none;
 }
 
@@ -31,34 +31,36 @@ html {
     display: none;
 }
 
+
 .button-group {
-    background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -moz-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-    font-size: 18px;
+    font-size: 32px;
     color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 24px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     text-decoration: none;
+    border: none;
+    border-radius: 150px;
 }
+
 
 .button-group:hover {
-    background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-color: #f17d65;
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.004);
-
 }
+
 
 .button-group:active {
-    background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    background-image: -moz-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
     box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 0.004);
 }
-
 
 .main-header {
     font-size: 16px;
@@ -70,6 +72,7 @@ html {
 
 
 .site-navigation,
+.slaider-button,
 .user-navigation {
     list-style: none;
 }
@@ -78,6 +81,23 @@ html {
 .catalog-menu-list {
     list-style: none;
 }
+
+.site-navigation a:hover {
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.site-navigation a:active {
+    background-color: rgb(246, 181, 165);
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    line-height: 16px;
+}
+
 
 .main-header a {
     color: white;
@@ -89,10 +109,24 @@ html {
     color: black;
 }
 
-a:active {
+.main-header a:active {
     background-color: rgba(248, 247, 244, 0.988);
     box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 18px;
 }
+
+
+.catalog-menu-list a:hover {
+    background-color: rgb(251, 222, 215);
+}
+
+.catalog-menu-list a:active {
+    background-color: rgb(246, 181, 165);
+}
+
 
 .search {
     border-radius: 6px;
@@ -123,6 +157,7 @@ a:active {
     font-size: 13px;
     color: rgb(50, 50, 50);
     line-height: 16px;
+    font-weight: 400;
 }
 
 
@@ -156,6 +191,30 @@ a:active {
     line-height: 60px;
 }
 
+.slaider-button .button {
+    background-color: #849d8f;
+    border: 2px solid white;
+    border-radius: 25px;
+    height: 21px;
+    width: 21px;
+    outline: none;
+}
+
+.button:hover {
+    border: 2px solid white;
+    border-radius: 25px;
+    height: 21px;
+    width: 21px;
+    background-color: #b2c1b7;
+}
+
+.button:active {
+    border: 2px solid white;
+    border-radius: 25px;
+    height: 21px;
+    width: 21px;
+    background-color: #ffffff;
+}
 
 .promotions-list h3 {
     font-size: 35px;
@@ -164,12 +223,22 @@ a:active {
     line-height: 41px;
 }
 
+.promotions-list-raspberries {
+    background-image: url("img/malina.jpg");
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+    border: none;
+}
+
+
 .promotions-list-raspberries p {
     font-size: 18px;
     color: rgb(255, 255, 255);
     font-weight: 700;
     line-height: 22px;
 }
+
 
 .catalog-list p {
     font-size: 16px;
@@ -179,7 +248,7 @@ a:active {
 }
 
 .catalog-list .image-item {
- border-radius: 250px;
+    border-radius: 250px;
     border: none;
 }
 
@@ -215,10 +284,7 @@ span {
     line-height: 22px;
 }
 
-.promotions-list-raspberries {
-    background-image: url("img/malina.jpg");
-    background-repeat: no-repeat;
-}
+
 
 .promotions-list-chocolate {
     background-image: url("img/chocolate.jpg");
@@ -249,7 +315,7 @@ span {
     color: rgb(53, 53, 53);
     font-weight: 700;
     line-height: 30px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .newsletter-subscription .newsletter-subscription-text {
@@ -289,7 +355,8 @@ span {
     color: white;
     text-decoration: none;
 }
-.documents-list .documents-button  {
+
+.documents-list .documents-button {
     text-decoration: none;
     font-size: 13px;
     color: rgb(255, 255, 255);
@@ -341,9 +408,9 @@ span {
 }
 
 .modal-form .button-group {
-    background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -moz-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
@@ -373,13 +440,14 @@ span {
     line-height: 16px;
 }
 
-.table-list a {
+.table-list .table-item {
     color: black;
 }
 
 .basket span {
     color: black;
     opacity: 0.5;
+    font-size: 13px;
 }
 
 .total {
@@ -406,12 +474,15 @@ span {
 }
 
 .breadcrumbs a:hover {
-    font-size: 16px;
-    color: rgb(255, 188, 158);
-    line-height: 18px;
-    font-weight: 600;
+    background-color: rgb(247, 246, 243);
+    color: black;
 }
 
+.breadcrumbs a:active {
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    color: black;
+}
 
 .page-title {
     font-size: 35px;
@@ -428,7 +499,7 @@ span {
 }
 
 .pagination-list a:hover,
-.pagination-list a:active{
+.pagination-list a:active {
     background-color: white;
     color: black;
 }
@@ -471,10 +542,6 @@ fieldset {
     background-color: rgb(237, 237, 237);
     box-shadow: inset 0 3px 2px 0 rgba(105, 105, 105, 0.2);
 }
-
-
-
-
 
 
 

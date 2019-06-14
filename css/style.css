@@ -42,10 +42,6 @@
     text-decoration: none;
 }
 
-.main-header a:hover {
-    background-color: white;
-    color: black;
-}
 
 .main-header a:active {
     background-color: rgba(248, 247, 244, 0.988);
@@ -68,6 +64,23 @@
     line-height: 16px;
     font-weight: 400;
 }
+
+.main-header .catalog-menu-list a:hover {
+    background-color: rgb(251, 222, 215);
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.main-header .catalog-menu-list a:active {
+    background-color: rgb(246, 181, 165);
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    line-height: 16px;
+    font-weight: 400;
+}
+
 
 .search {
     border-radius: 6px;
@@ -101,6 +114,7 @@
     line-height: 24px;
     text-decoration: none;
     border: none;
+    border-radius: 150px;
 }
 
 
@@ -108,10 +122,18 @@
     color: black;
 }
 
-.login .user-button {
+.main-header .login .user-button {
     font-size: 13px;
     color: rgb(50, 50, 50);
-    line-height: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.main-header .login .user-button:hover,
+.main-header .login .user-button:active {
+    color: rgb(232, 77, 55);
+    font-size: 13px;
+    line-height: 18px;
     font-weight: 400;
 }
 
@@ -138,8 +160,7 @@
     line-height: 24px;
 }
 
-
-.slaider-list .slaider-headline {
+.main-navigation .slaider-list .slaider-headline {
     font-size: 60px;
     color: rgb(255, 255, 255);
     font-weight: 700;
@@ -152,6 +173,8 @@
     font-weight: 700;
     line-height: 41px;
 }
+
+
 
 .promotions-list-raspberries {
     background-image: url("../img/malina.jpg");
@@ -174,7 +197,7 @@
     font-size: 16px;
     color: rgb(255, 255, 255);
     line-height: 22px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .catalog-list .image-item {
@@ -384,9 +407,7 @@ span {
     line-height: 16px;
 }
 
-.table-list .table-item {
-    color: black;
-}
+
 
 .basket span {
     color: black;
@@ -485,6 +506,7 @@ fieldset {
     border-color: rgb(255, 255, 255);
     background-color: #9cb0a4;
     color: white;
+    border-radius: 150px;
 }
 
 .filters-button:hover {
@@ -499,44 +521,18 @@ fieldset {
 
 
 .button-group:hover {
-    background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: linear-gradient(90deg, #f58669 0%, #ec6f5e 100%);
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.004);
-
 }
 
 
 .button-group:active {
-    background-image:  linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -moz-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
     box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 0.004);
 }
 
-
-.site-navigation a:hover {
-    background-color: rgba(248, 247, 244, 0.988);
-    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
-    font-size: 16px;
-    color: rgb(51, 51, 51);
-    font-weight: 700;
-    line-height: 18px;
-}
-
-
-.site-navigation a:active {
-    background-color: rgb(246, 181, 165);
-    font-size: 14px;
-    color: rgb(50, 50, 50);
-    line-height: 16px;
-}
-
-
-.catalog-menu-list a:hover {
-    background-color: rgb(251, 222, 215);
-}
-
-
-.catalog-menu-list a:active {
-    background-color: rgb(246, 181, 165);
-}
 
 .button {
     border: 2px solid white;
@@ -546,7 +542,6 @@ fieldset {
     background-color: #849d8f;
     outline: none;
 }
-
 
 .button:hover {
     border: 2px solid white;
@@ -564,48 +559,65 @@ fieldset {
     background-color: #ffffff;
 }
 
-.user-navigation a:active {
-    background-color: rgba(248, 247, 244, 0.988);
-    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+
+.main-navigation a:hover:not(.main-navigation .user-navigation .table-list a) {
+    background-color: rgb(247, 246, 243);
     font-size: 16px;
     color: rgb(51, 51, 51);
     font-weight: 700;
     line-height: 18px;
 }
 
+.main-navigation a:active:not(.main-navigation .user-navigation .table-list a) {
+    background-color: rgba(237, 237, 237, 0.988);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    font-size: 16px;
+}
 
+.currect {
+    background-color: rgb(208, 112, 88);
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 18px;
+}
 
+.bold {
+    font-weight: 700;
+}
 
+.main-navigation .basket .button-group:hover {
+    background-image: linear-gradient(90deg, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.004);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
 
+.main-navigation .basket .button-group:active {
+    background-image: -moz-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+    box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 0.004);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
 
+.table-list .table-item {
+    color: black;
+}
 
+.table-list .table-item:hover,
+.table-list .table-item:active {
+    color: black;
+    font-size: 13px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.documents-button {
+    border-bottom: 1px solid #98ada1;
+}
 
 
 

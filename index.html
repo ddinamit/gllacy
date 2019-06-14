@@ -11,14 +11,12 @@
 <body class="body-html">
 <header class="main-header">
     <nav class="main-navigation">
-        <a class="main-header-logo">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип GlassyShop»">
-        </a>
+        <a><img src="img/logo.svg" width="154" height="64" alt="Логотип GlassyShop»"></a>
         <ul class="site-navigation">
             <li>
-                <a  href="catalog.html">Каталог</a>
+                <a href="catalog.html">Каталог</a>
                 <ul class="catalog-menu-list">
-                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#" class="catalog-menu-currect">Новинки</a></li>
                     <li><a href="#">Сливочное</a></li>
                     <li><a href="#">Щербеты</a></li>
                     <li><a href="#">Фруктовый лед</a></li>
@@ -31,7 +29,7 @@
 
         <ul class="user-navigation">
             <li>
-                <a class="user-navigation-link" href="search.html">Поиск</a>
+                <a class="user-navigation" href="search.html">Поиск</a>
                 <form class="search">
                     <p>
                         <label class="visually-hidden" for="search">Поиск</label>
@@ -52,8 +50,8 @@
                     <label for="user-password" class="visually-hidden">Пароль</label>
                     <button class="button-group">Войти</button>
                 </form>
-                <a class="user-button currect" href="#">Забыли пароль?</a>
-                <a class="user-button currect" href="#">Новая регистрация</a>
+                <a class="user-button" href="#">Забыли пароль?</a>
+                <a class="user-button" href="#">Новая регистрация</a>
             </li>
             <li><a href="basket">Корзина</a></li>
         </ul>
@@ -125,28 +123,28 @@
 
         <ul class="catalog-list">
             <li class="catalog-item">
-                <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                <p class="catalog-item-headline">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
                 <img class="image-item" src="img/2.1.jpg" width="267" height="267"
                      alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 <p class="hits-item-price">310₽<span>/кг</span></p>
                 <a href="" class="button-group">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-                <p>Сливочно-кофейное с кусочками шоколада</p>
+                <p class="catalog-item-headline">Сливочно-кофейное с кусочками шоколада</p>
                 <img class="image-item" src="img/2.2.jpg" width="267" height="267"
                      alt="Сливочно-кофейное с кусочками шоколада">
                 <p class="hits-item-price">380₽<span>/кг</span></p>
                 <a href="" class="button-group">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-                <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <p class="catalog-item-headline">Сливочно-клубничное с присыпкой из белого шоколада</p>
                 <img class="image-item" src="img/2.3.jpg" width="267" height="267"
                      alt="Сливочно-клубничное с присыпкой из белог шоколада">
                 <p class="hits-item-price">355₽<span>/кг</span></p>
                 <a href="" class="button-group">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-                <p>Сливочное крем-брюле с карамельной подливкой</p>
+                <p class="catalog-item-headline">Сливочное крем-брюле с карамельной подливкой</p>
                 <img class="image-item" src="img/2.4.jpg" width="267" height="267"
                      alt="Сливочное крем-брюле с карамельной подливкой">
                 <p class="hits-item-price">415₽<span>/кг</span></p>
@@ -251,7 +249,7 @@
         <h2 class="visually-hidden">Полезное</h2>
 
         <ul class="documents-list">
-            <li><a class="documents-button" href="#">Для поставщиков</a></li>
+            <li><a class="documents-button bold" href="#">Для поставщиков</a></li>
             <li><a class="documents-button" href="#">О производстве</a></li>
             <li><a class="documents-button" href="#">Наши документы</a></li>
             <li><a class="documents-button" href="#">Экологические стандарты</a></li>

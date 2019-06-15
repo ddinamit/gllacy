@@ -1,4 +1,4 @@
-.body-html {
+.body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', Arial sans-serif;
@@ -8,6 +8,11 @@
     font-weight: normal;
     color: white;
     background-color: rgb(132, 157, 143);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .slaider-list,
@@ -24,10 +29,19 @@
     list-style: none;
 }
 
-.visually-hidden {
-    display: none;
-}
 
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+}
 
 .main-header {
     font-size: 16px;
@@ -37,15 +51,31 @@
     background-color: rgb(132, 157, 143);
 }
 
+.main-navigation a:hover {
+    background-color: rgb(247, 246, 243);
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.main-navigation a:active {
+    background-color: rgba(237, 237, 237, 0.988);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    font-size: 16px;
+}
+
 .main-header a {
     color: white;
     text-decoration: none;
+    border: none;
+    border-radius: 50px;
 }
 
 
 .main-header a:active {
     background-color: rgba(248, 247, 244, 0.988);
-    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.5);
     font-size: 16px;
     color: rgb(51, 51, 51);
     font-weight: 700;
@@ -127,6 +157,7 @@
     color: rgb(50, 50, 50);
     line-height: 18px;
     font-weight: 400;
+    border-bottom: 1px solid #b2b2b2;
 }
 
 .main-header .login .user-button:hover,
@@ -135,6 +166,7 @@
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
+    border-bottom: 1px solid rgb(255, 188, 158);
 }
 
 
@@ -175,7 +207,6 @@
 }
 
 
-
 .promotions-list-raspberries {
     background-image: url("../img/malina.jpg");
     background-repeat: no-repeat;
@@ -213,9 +244,9 @@
 }
 
 span {
-    font-size: 45px;
+    font-size: 13px;
     color: rgb(255, 255, 255);
-    font-weight: 700;
+    font-weight: 400;
     text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
@@ -382,18 +413,6 @@ span {
 }
 
 
-.body-catalog {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', Arial sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    line-height: normal;
-    font-weight: normal;
-    color: white;
-    background-color: rgb(132, 157, 143);
-}
-
 .basket {
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
@@ -406,7 +425,6 @@ span {
     color: rgb(50, 50, 50);
     line-height: 16px;
 }
-
 
 
 .basket span {
@@ -530,7 +548,7 @@ fieldset {
     background-image: -moz-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
     background-image: -webkit-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
     background-image: -ms-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
-    box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 0.004);
+    box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 1);
 }
 
 
@@ -559,20 +577,6 @@ fieldset {
     background-color: #ffffff;
 }
 
-
-.main-navigation a:hover {
-    background-color: rgb(247, 246, 243);
-    font-size: 16px;
-    color: rgb(51, 51, 51);
-    font-weight: 700;
-    line-height: 18px;
-}
-
-.main-navigation a:active {
-    background-color: rgba(237, 237, 237, 0.988);
-    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.004);
-    font-size: 16px;
-}
 
 .currect {
     background-color: rgb(208, 112, 88);
@@ -620,11 +624,34 @@ fieldset {
     border-bottom: 1px solid #98ada1;
 }
 
+.modal-form input:hover,
+.modal-form textarea:hover {
+    border: 2px solid rgb(154, 154, 154);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.52;
+    outline: none;
+    font-size: 16px;
+    color: rgb(50, 50, 50);
+    font-weight: 700;
+    line-height: 24px;
+}
 
+.modal-form input:focus,
+.modal-form textarea:focus {
+    border: 2px solid rgb(46, 136, 228);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.52;
+    outline: none;
+}
 
-
-
-
+.catalog-item:hover {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
 
 
 
